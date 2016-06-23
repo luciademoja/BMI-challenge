@@ -12,11 +12,12 @@
     <form>
       <input type="text" id="weight" placeholder="Weight">
       <input type="text" id="height" placeholder="Height">
-      <input type="button" id="calculate" placeholder="Calculate">
+      <input type="button" id="calculate" value="Calculate">
     </form>
     <div>
       <span id="display_value"></span>
       <span id="display_message"></span>
+    </div>
     <script type="text/javascript">
       $(document).ready(function () {
         $('#calculate').click(function () {
@@ -25,9 +26,9 @@
           var person = new Person({weight: w, height: h});
           person.calculate_bmi();
           $('#display_value').html('Your BMI is ' + person.bmiValue);
-          $('#display_message').html('and you are' + person.bmiMessage);
+          $('#display_message').html('and you are ' + person.bmiMessage);
         })
       })
-    </div>
+    </script>
   </body>
 </html>
