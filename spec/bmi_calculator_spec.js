@@ -12,4 +12,5 @@ describe("BMICalculator", function() {
   expect(person.bmiValue).toEqual(26.01);
   });
 
+  
 });

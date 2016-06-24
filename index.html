@@ -6,13 +6,17 @@
     <title></title>
     <script src="src/person.js"></script>
     <script src="src/bmi_calculator.js"></script>
-    <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
+    <script src='lib/jquery-3.0.js'></script>
   </head>
   <body>
     <form>
-      <input type="text" id="weight" placeholder="Weight">
-      <input type="text" id="height" placeholder="Height">
-      <input type="button" id="calculate" value="Calculate">
+      <input type="text" id="weight" placeholder="Weight" />
+      <input type="text" id="height" placeholder="Height" />
+      <label for="metric">Metric</label>
+      <input type="radio" id="calc_type" value="metric" name="calc_type" placeholder="metric" />
+      <label for="imperial">Imperial</label>
+      <input type="radio" id="calc_type" value="imperial" name="calc_type" placeholder="imperial" />
+      <input type="button" id="calculate" value="Calculate" />
     </form>
     <div>
       <span id="display_value"></span>
@@ -23,7 +27,8 @@
         $('#calculate').click(function () {
           var w = parseFloat($('#weight').val());
           var h = parseFloat($('#height').val());
-          var person = new Person({weight: w, height: h});
+          var c = $('#calc_type:checked').val();
+          var person = new Person({weight: w, height: h, calc_type: c});
           person.calculate_bmi();
           $('#display_value').html('Your BMI is ' + person.bmiValue);
           $('#display_message').html('and you are ' + person.bmiMessage);
