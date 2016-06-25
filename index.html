@@ -3,21 +3,30 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="css/stylesheet.css" />
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/foundation.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <title>BMI Calculator</title>
     <script src="src/person.js"></script>
     <script src="src/bmi_calculator.js"></script>
     <script src='lib/jquery-3.0.js'></script>
   </head>
   <body>
+    <h1>BMI Calculator</h1>
     <form>
-      <input type="text" id="weight" placeholder="Weight" />
-      <input type="text" id="height" placeholder="Height" />
-      <label for="metric">Metric</label>
-      <input type="radio" id="calc_type" value="metric" name="calc_type" placeholder="Metric" />
-      <label for="imperial">Imperial</label>
-      <input type="radio" id="calc_type" value="imperial" name="calc_type" placeholder="Imperial" />
-      <input type="button" id="calculate" value="Calculate" />
+      <div class="row">
+        <div class="large-6 columns">
+          <label>Choose Your Input System</label>
+          <input type="radio" id="calc_type" value="metric" name="calc_type" placeholder="Metric" /><label for="Metric">Metric</label>
+          <input type="radio" id="calc_type" value="imperial" name="calc_type" placeholder="Imperial" /><label for="Imperial">Imperial</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <input type="text" id="weight" placeholder="Weight" />
+          <input type="text" id="height" placeholder="Height" />
+          <input type="button" id="calculate" value="Calculate" />
+        </div>
+      </div>
     </form>
     <div>
       <span id="display_value"></span>
