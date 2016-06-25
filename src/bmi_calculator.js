@@ -5,7 +5,7 @@ BMICalculator.prototype.bmi = function(obj) {
   var weight = obj.weight;
   var height = obj.height;
   var calc_type = obj.calc_type;
-  var finalBmi = 0;
+  var finalBmi;
   if (weight > 0 && height > 0) {
     switch(calc_type){
       case 'metric':
