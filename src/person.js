@@ -1,5 +1,4 @@
 function Person(attr) {
-  debugger;
   this.weight = attr.weight;
   this.height = attr.height;
   this.calc_type = attr.calc_type;
