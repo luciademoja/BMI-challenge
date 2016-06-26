@@ -7,6 +7,7 @@ BMICalculator.prototype.bmi = function(obj) {
   var calc_type = obj.calc_type;
   var finalBmi;
   if (weight > 0 && height > 0) {
+          debugger;
     switch(calc_type){
       case 'metric':
         finalBmi = weight / (height / 100 * height / 100);

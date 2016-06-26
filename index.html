@@ -37,7 +37,7 @@
         $('#calculate').click(function () {
           var w = parseFloat($('#weight').val());
           var h = parseFloat($('#height').val());
-          var c = $('#calc_type:checked').val();
+          var c = $('input:radio[name="calc_type"]:checked').val();
           var person = new Person({weight: w, height: h, calc_type: c});
           person.calculate_bmi();
           $('#display_value').html('Your BMI is ' + person.bmiValue);
