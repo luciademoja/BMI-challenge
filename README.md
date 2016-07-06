@@ -1,1 +1,1 @@
-# IBM-challenge
+# BMI-challenge
